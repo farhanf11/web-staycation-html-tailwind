@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../path/to/@themesberg/flowbite/dist/datepicker.bundle.js"></script>
+    <script src="https://unpkg.com/@themesberg/flowbite@1.3.0/dist/datepicker.bundle.js"></script>
+
+</head>
+<body>
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between">
+                <div class="flex space-x-7">
+                    <div>
+                        <!-- Logo -->
+                        <a href="landingPage.html" class="flex items-center py-4 px-2 -ml-4">
+							<p class="text-blue-700 font-bold text-2xl">
+                                Stay
+                            </p>
+                            <p class="text-black-700 font-bold text-2xl">
+                                cation
+                            </p>
+						</a>
+                    </div>
+                    <!-- Primary Navbar items -->
+                    <div class="hidden md:flex items-center space-x-1" data-scroll-section>
+                        <a class="py-4 px-2 text-blue-500 border-b-4 border-blue-500 font-semibold ">Home</a>
+                        <a class="py-4 px-2 text-gray-500 font-semibold hover:text-blue-500 transition duration-300 " href="#stories-section" data-scroll-to>Stories</a>
+                        <a class="py-4 px-2 text-gray-500 font-semibold hover:text-blue-500 transition duration-300" href="#about-section" data-scroll-to>About</a>
+                        <a class="py-4 px-2 text-gray-500 font-semibold hover:text-blue-500 transition duration-300" href="#contact-section" data-scroll-to>Contact Us</a>
+                    </div>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button class="outline-none mobile-menu-button">
+                    <svg class=" w-6 h-6 text-gray-500 hover:text-blue-500 "
+                        x-show="!showMenu"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                    >
+                        <path d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+                </div>
+            </div>
+        </div>
+        <!-- mobile menu -->
+        <div class="hidden mobile-menu" data-scroll-section>
+            <ul class="">
+                <li class="active"><a href="index.html" class="block text-sm px-2 py-4 text-white bg-blue-700 font-semibold">Home</a></li>
+                <li><a href="#stories" class="block text-sm px-2 py-4 hover:bg-blue-400 hover:text-white transition duration-300">Stories</a></li>
+                <li><a href="#about" class="block text-sm px-2 py-4 hover:bg-blue-400 hover:text-white transition duration-300">About</a></li>
+                <li><a href="#contact" class="block text-sm px-2 py-4 hover:bg-blue-400 hover:text-white transition duration-300">Contact Us</a></li>
+                <li><a href="index.html" class="block py-4 px-2 font-medium text-red-500 rounded hover:bg-red-400 hover:text-white transition duration-300">Log out</a></li>
+            </ul>
+        </div>
+        <script>
+            const btn = document.querySelector("button.mobile-menu-button");
+            const menu = document.querySelector(".mobile-menu");
+
+            btn.addEventListener("click", () => {
+                menu.classList.toggle("hidden");
+            });
+        </script>
+    </nav>
+
+    <!--promo-->
+    <div class="bg-blue-900 text-center py-4 lg:px-4">
+        <div class="p-2 bg-green-600 items-center text-indigo-100 leading-none lg:rounded-full flex lg:inline-flex" role="alert">
+          <span class="flex rounded-full bg-red-700 uppercase px-2 py-1 text-xs font-bold mr-3">New</span>
+          <span class="font-semibold mr-2 text-left flex-auto">Nikmati diskon hingga 35% untuk maksimal pemesanan 1 kamar</span>
+          <svg class="fill-current opacity-75 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M12.95 10.707l.707-.707L8 4.343 6.586 5.757 10.828 10l-4.242 4.243L8 15.657l4.95-4.95z"/></svg>
+        </div>
+     </div>
+
+    <!--content-->
+    <div class="flex font-semibold mt-5 ml-5">
+        <a class="text-gray-400 " href="./landingPage.html">Home</a>
+        <p>/</p>
+        <a class="block text-black-700 font-semibold active" href="#">Details</a>
+    </div>
+
+    <div class="grid place-items-center">
+        <h2 class="font-bold text-xl lg:text-2xl" >Villa Anggrek</h2>  
+        
+        <div class="m-4 mt-8 flex gap-4 md:gap-4 lg:gap-7">
+            <div>
+                <img class="w-96" src="/frontend/images/details/detail1.png" alt="">
+            </div>
+            <div class="grid lg:gap-y-4 gap-y-2 mb-16">
+                <img class="w-64" src="/frontend/images/details/detail2.png" alt="">
+                <img class="w-64" src="/frontend/images/details/detail3.png" alt="">
+            </div>            
+        </div>
+
+        <div class="flex gap-10">
+            <div class="w-2/3">
+                <h2 class="font-bold">Describe Place</h2>
+                <p class="max-w-sm">Anggrek Villa, tersedia untuk anda, 
+                    cocok untuk tempat menginap liburan keluarga. 
+                    tempat strategis dari Taman Safari dan Curug Citupa. 
+                    Villa ini dilengkapi fasilitas wi-fi, lapangan, 
+                    kolam renang pribadi, 5 kamar tidur, 
+                    ruang tamu, dapur, 3 kamar mandi, dan aula 
+                    untuk berkumpul yang tersedia permainan billiard 
+                    dan karoke, juga ada fasilitas lain seperti TV, kulkas, 
+                    kompor, free air galon, dan lainnya.</p>
+            </div>
+            <div class="w-2/3">
+                <div class="max-w-sm rounded overflow-hidden shadow-lg">                    
+                    <div class="px-6 py-4">
+                      <div class="font-bold text-md mb-2">Booking Now</div>
+                      <div class="font-bold text-green-500 text-md mb-2">Rp 1.750.000</div>
+                      <p class="font-semibold text-sm">How do you long to stay?</p>
+                      <div date-rangepicker class="flex items-center mb-10">
+                        <div class="relative">
+                              <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                                  <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+                              </div>
+                              <input name="start" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date start">
+                          </div>
+                        <span class="mx-4 text-gray-500">to</span>
+                        <div class="relative">
+                          <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                              <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+                          </div>
+                          <input name="end" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date end">
+                        </div>
+                      </div>
+                      <a href="./payment.html" class="bg-blue-700 hover:bg-blue-300 text-white font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+                        Contiue to Book
+                      </a>
+                    </div>
+                  </div>
+            </div>
+        </div>
+        <div>
+            <h2 class="font-bold mt-10 text-xl text-center mb-5 text-blue-800">Facilities</h2>
+            <div class="flex gap-10">
+                <div >
+                    <img class="w-10" src="/frontend/images/details/icon-bed.svg" alt="">
+                    <p class="font-semibold text-center">4</p>
+                </div>
+                <div >
+                    <img class="w-10" src="/frontend/images/details/icon-diningroom.svg" alt="">
+                </div>
+                <div >
+                    <img class="h-10" src="/frontend/images/details/icon-freezer.svg" alt="">
+                    <p class="font-semibold text-center">1</p>
+                </div>
+                <div >
+                    <img class="w-10" src="/frontend/images/details/icon-livingroom.svg" alt="">
+                </div>
+                <div >
+                    <img class="w-10" src="/frontend/images/details/icon-shower.svg" alt="">
+                    <p class="font-semibold text-center">3</p>
+                </div>
+                <div >
+                    <img class="w-12" src="/frontend/images/details/icon-swimpool.svg" alt="">                    
+                </div>
+                <div >
+                    <img class="w-10" src="/frontend/images/details/icon-tv.svg" alt="">
+                    <p class="font-semibold text-center">5</p>
+                </div>
+                <div >
+                    <img class="w-10" src="/frontend/images/details/icon-wifi.svg" alt="">
+                    <p class="font-semibold text-center">free</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="most-pick mt-10 grid place-items-center">
+          <h2 class="font-bold text-lg lg:text-xl mb-5">More Option</h2>
+          <div class="relative w-full flex gap-6 snap-x snap-mandatory overflow-x-auto pb-14">
+              <div class="snap-x shrink-0">
+                <div class="shrink-0 w-4 sm:w-48"></div>
+              </div>
+              <!--Card 1-->
+              <a href="details.html" class="border-gray-400 border-y border-x border-solid border-2 rounded-md snap-start shrink-0">
+                <img class="shrink-0 w-40 h-36 rounded-md shadow-md bg-white" src="https://images.unsplash.com/photo-1606046604972-77cc76aee944?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8aG90ZWxzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1400&q=60">
+                <h2 class="ml-2 mt-2 font-semibold">hotel Amin</h2>
+                <h2 class="ml-2 text-green-700 font-semibold">Rp 860.000</h2>
+              </a>
+              <!--card2-->
+              <a href="details.html" class="border-gray-400 border-y border-x border-solid border-2 rounded-md snap-start shrink-0">
+                <img class="shrink-0 w-40 h-36 rounded-md shadow-md bg-white" src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8aG90ZWxzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1400&q=60">
+                <h2 class="ml-2 mt-2 font-semibold">hotel Porpoin</h2>
+                <h2 class="ml-2 text-green-700 font-semibold">Rp 770.000</h2>
+              </a>
+              <!--card3-->
+              <a href="details.html" class="border-gray-400 border-y border-x border-solid border-2 rounded-md snap-start shrink-0">
+                <img class="shrink-0 w-40 h-36 rounded-md shadow-md bg-white" src="/frontend/images/villa8.png">
+                <h2 class="ml-2 mt-2 font-semibold">hotel bluewing</h2>
+                <h2 class="ml-2 text-green-700 font-semibold">Rp 690.000</h2>
+              </a>
+              <!--card4-->
+              <a href="details.html" class="border-gray-400 border-y border-x border-solid border-2 rounded-md snap-center shrink-0">
+                <img class="shrink-0 w-40 h-36 rounded-md shadow-md bg-white" src="/frontend/images/villa7.png">
+                <h2 class="ml-2 mt-2 font-semibold">hotel As-six</h2>
+                <h2 class="ml-2 text-green-700 font-semibold">Rp 890.000</h2>
+              </a>
+              <!--card5-->
+              <a href="details.html" class="border-gray-400 border-y border-x border-solid border-2 rounded-md snap-center shrink-0">
+                <img class="shrink-0 w-40 h-36 rounded-md shadow-md bg-white" src="/frontend/images/villa6.png">
+                <h2 class="ml-2 mt-2 font-semibold">hotel As-six</h2>
+                <h2 class="ml-2 text-green-700 font-semibold">Rp 890.000</h2>
+              </a>
+              <!--card6-->
+              <a href="details.html" class="border-gray-400 border-y border-x border-solid border-2 rounded-md snap-center shrink-0">
+                <img class="shrink-0 w-40 h-36 rounded-md shadow-md bg-white" src="/frontend/images/villa7.png">
+                <h2 class="ml-2 mt-2 font-semibold">hotel As-six</h2>
+                <h2 class="ml-2 text-green-700 font-semibold">Rp 890.000</h2>
+              </a>
+              <!--card7-->
+              <a href="details.html" class="border-gray-400 border-y border-x border-solid border-2 rounded-md snap-start shrink-0">
+                <img class="shrink-0 w-40 h-36 rounded-md shadow-md bg-white" src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aG90ZWxzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1400&q=60">
+                <h2 class="ml-2 mt-2 font-semibold">hotel As-six</h2>
+                <h2 class="ml-2 text-green-700 font-semibold">Rp 890.000</h2>
+              </a>
+              <!--card7-->
+              <a href="details.html" class="border-gray-400 border-y border-x border-solid border-2 rounded-md snap-start shrink-0">
+                <img class="shrink-0 w-40 h-36 rounded-md shadow-md bg-white" src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aG90ZWxzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1400&q=60">
+                <h2 class="ml-2 mt-2 font-semibold">hotel sinte</h2>
+                <h2 class="ml-2 text-green-700 font-semibold">Rp 890.000</h2>
+              </a>
+              <div class="snap-center shrink-0">
+                <div class="shrink-0 w-4 sm:w-48"></div>
+              </div>
+            </div>
+          </div>
+          <div class="relative w-full flex gap-6 snap-x snap-mandatory overflow-x-auto pb-14">
+            <div class="snap-x shrink-0">
+              <div class="shrink-0 w-4 sm:w-48"></div>
+            </div>
+            <!--Card 1-->
+            <a href="details.html" class="border-gray-400 border-y border-x border-solid border-2 rounded-md snap-start shrink-0">
+              <img class="shrink-0 w-40 h-36 rounded-md shadow-md bg-white" src="/frontend/images/villa1.png">
+              <h2 class="ml-2 mt-2 font-semibold">hotel As-six</h2>
+              <h2 class="ml-2 text-green-700 font-semibold">Rp 890.000</h2>
+            </a>
+            <!--card2-->
+            <a href="details.html" class="border-gray-400 border-y border-x border-solid border-2 rounded-md snap-start shrink-0">
+              <img class="shrink-0 w-40 h-36 rounded-md shadow-md bg-white" src="/frontend/images/villa2.png">
+              <h2 class="ml-2 mt-2 font-semibold">hotel An-nun</h2>
+              <h2 class="ml-2 text-green-700 font-semibold">Rp 890.000</h2>
+            </a>
+            <!--card3-->
+            <a href="details.html" class="border-gray-400 border-y border-x border-solid border-2 rounded-md snap-start shrink-0">
+              <img class="shrink-0 w-40 h-36 rounded-md shadow-md bg-white" src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGhvdGVsc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=1400&q=60">
+              <h2 class="ml-2 mt-2 font-semibold">hotel Datag</h2>
+              <h2 class="ml-2 text-green-700 font-semibold">Rp 699.000</h2>
+            </a>
+            <!--card4-->
+            <a href="details.html" class="border-gray-400 border-y border-x border-solid border-2 rounded-md snap-center shrink-0">
+              <img class="shrink-0 w-40 h-36 rounded-md shadow-md bg-white" src="/frontend/images/villa4.png">
+              <h2 class="ml-2 mt-2 font-semibold">hotel As-six</h2>
+              <h2 class="ml-2 text-green-700 font-semibold">Rp 890.000</h2>
+            </a>
+            <!--card4-->
+            <a href="details.html" class="border-gray-400 border-y border-x border-solid border-2 rounded-md snap-center shrink-0">
+              <img class="shrink-0 w-40 h-36 rounded-md shadow-md bg-white" src="/frontend/images/villa5.png">
+              <h2 class="ml-2 mt-2 font-semibold">hotel As-saad</h2>
+              <h2 class="ml-2 text-green-700 font-semibold">Rp 890.000</h2>
+            </a>
+            <!--card6-->
+            <a href="details.html" class="border-gray-400 border-y border-x border-solid border-2 rounded-md snap-center shrink-0">
+              <img class="shrink-0 w-40 h-36 rounded-md shadow-md bg-white" src="/frontend/images/villa2.png">
+              <h2 class="ml-2 mt-2 font-semibold">hotel Agofa</h2>
+              <h2 class="ml-2 text-green-700 font-semibold">Rp 890.000</h2>
+            </a>
+            <!--card7-->
+            <a href="details.html" class="border-gray-400 border-y border-x border-solid border-2 rounded-md snap-center shrink-0">
+              <img class="shrink-0 w-40 h-36 rounded-md shadow-md bg-white" src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGhvdGVsc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=1400&q=60">
+              <h2 class="ml-2 mt-2 font-semibold">hotel Asanah</h2>
+              <h2 class="ml-2 text-green-700 font-semibold">Rp 890.000</h2>
+            </a>
+            <!--card8-->
+            <a href="details.html" class="border-gray-400 border-y border-x border-solid border-2 rounded-md snap-center shrink-0">
+              <img class="shrink-0 w-40 h-36 rounded-md shadow-md bg-white" src="https://images.unsplash.com/photo-1596178065887-1198b6148b2b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fGhvdGVsc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=1400&q=60">
+              <h2 class="ml-2 mt-2 font-semibold">hotel Akila</h2>
+              <h2 class="ml-2 text-green-700 font-semibold">Rp 890.000</h2>
+            </a>
+            <div class="snap-center shrink-0">
+              <div class="shrink-0 w-4 sm:w-48"></div>
+            </div>
+        </div>   
+        </div>
+    
+    <footer class="text-center bg-gray-900 text-white mt-20">
+        <section id="about-section" class="container px-6 pt-6" data-scroll-section>
+          <div class="flex justify-center mb-6" data-scroll data-scroll-sticky data-scroll-target="#about">                 
+            <a href="https://tocat.store" type="button" 
+            class="rounded-full border-2 border-white text-white 
+            leading-normal uppercase hover:bg-black hover:bg-opacity-5 
+            focus:outline-none focus:ring-0 transition 
+            duration-150 ease-in-out w-9 h-9 m-1"
+            >
+              <svg aria-hidden="true"
+              focusable="false"
+              data-prefix="fab"
+                data-icon="google"
+                class="w-3 h-full mx-auto"
+                role="img"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 488 512"
+              >
+                <path
+                  fill="currentColor"
+                  d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"
+                ></path>
+              </svg>
+            </a>
+      
+            <a href="https:/instagram.com/farhanf_11" type="button" class="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
+              <svg aria-hidden="true"
+              focusable="false"
+              data-prefix="fab"
+              data-icon="instagram"
+                class="w-3 h-full mx-auto"
+                role="img"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+              >
+                <path
+                  fill="currentColor"
+                  d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 
+                  319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 
+                  74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 
+                  26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 
+                  27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 
+                  1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 
+                  36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 
+                  34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 
+                  9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 
+                  22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                ></path>
+              </svg>
+            </a>
+      
+            <a href="https://www.linkedin.com/in/farhan-fadhlurohman-7748b31b7/" type="button" class="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
+              <svg aria-hidden="true"
+              focusable="false"
+              data-prefix="fab"
+              data-icon="linkedin-in"
+                class="w-3 h-full mx-auto"
+                role="img"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+              >
+                <path
+                  fill="currentColor"
+                  d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
+                ></path>
+              </svg>
+            </a>
+      
+            <a href="https://github.com/farhanf11" type="button" class="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
+              <svg aria-hidden="true"
+              focusable="false"
+              data-prefix="fab"
+              data-icon="github"
+                class="w-3 h-full mx-auto"
+                role="img"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 496 512"
+              >
+                <path
+                  fill="currentColor"
+                  d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
+                ></path>
+              </svg>
+            </a>
+          </div>
+                      
+          <div class="mb-6">
+            <p>
+              Staycationadalah website yang di buat dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
+              repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam
+              eum harum corrupti dicta, aliquam sequi voluptate quas.
+            </p>
+          </div>
+      
+          <div class="grid lg:grid-cols-4 md:grid-cols-2">
+            <div class="mb-6">
+              <h5 class="uppercase text-yellow-500 font-bold mb-2.5">Staycation</h5>
+      
+              <ul class="list-none mb-0">
+                <li>
+                  <p>we provide BEST accomodation to make perfect your holidays with family. Lest Booking!</p>
+                </li>
+              </ul>
+            </div>
+      
+            <div class="mb-6">
+              <h5 class="uppercase font-bold mb-2.5">For Beginers</h5>
+      
+              <ul class="list-none mb-0">
+                <li>
+                  <a href="#!" class="text-white">Create Account</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-white">Start Booking</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-white">Use Payment</a>
+                </li>
+              </ul>
+            </div>
+      
+            <div class="mb-6">
+              <h5 class="uppercase font-bold mb-2.5">Explore Us</h5>
+      
+              <ul class="list-none mb-0">
+                <li>
+                  <a href="#!" class="text-white">Tnstagram</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-white">Tiktok</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-white">Youtube</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-white">Twitter</a>
+                </li>
+              </ul>
+            </div>
+      
+            <section id="contact-section" class="mb-6" data-scroll-section="">
+              <h5 class="uppercase font-bold mb-2.5" data-scroll data-scroll-sticky data-scroll-target="#contact">Conttact Authors</h5>
+      
+              <ul class="list-none mb-0">
+                <li>
+                  <a href="#!" class="text-white">Farhanfadlurahman@gmail.com</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-white">+62 896-4341-0793</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-white">FarhanF_11</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-white">Jakarta Barat</a>
+                </li>
+              </ul>
+            </section>
+          </div>
+        </section>
+      
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.2);">
+          © 2022 Copyright:
+          <a class="text-white" href="https://tailwind-elements.com/">Farhan Fadlurrohman</a>
+        </div>
+    </footer>
+</body>
+</html>
